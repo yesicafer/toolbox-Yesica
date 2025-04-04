@@ -1,0 +1,17 @@
+{   "first_name": "Rihanna",
+    "password": "123",
+    "day": "3",
+    "month": "March",
+    "year": "1995",
+    "last_name": "umbrella",
+    "company": "google",
+    "address": {
+      "addressone": "Kulas Light",
+      "addresstwo": "Apt. 556",
+      "country": "India",
+      "state": "Chhattisgarh",
+      "city": "city example",
+      "zipcode": "92998-3874"      
+    },
+     "celphone": "3115520000"
+}

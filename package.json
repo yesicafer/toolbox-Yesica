@@ -1,0 +1,19 @@
+{
+  "name": "cypessautomation",
+  "version": "1.0.0",
+  "description": "Cypress-Automation\r Este proyecto es la automatización de Pruebas de UI en Plataforma de Ecommerce y  Pruebas de API con Echo Server. usando Cypress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yesica",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^14.2.1"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+    
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-04T19:49:31.237Z",
+    "end": "2025-04-04T19:49:43.786Z",
+    "duration": 12549,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac01e05f-1e89-4b86-80e2-3083d179a5a0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\UI\\ecommerce.cy.js",
+      "file": "cypress\\e2e\\UI\\ecommerce.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5e0cc5df-a139-4a95-8d38-707ca60a955c",
+          "title": "Register a new user ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open link",
+              "fullTitle": "Register a new user  open link",
+              "timedOut": null,
+              "duration": 2486,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automationexercise.com/');",
+              "err": {},
+              "uuid": "0546a73d-7b4e-4bd2-9121-2eec658531a2",
+              "parentUUID": "5e0cc5df-a139-4a95-8d38-707ca60a955c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Singup",
+              "fullTitle": "Register a new user  Singup",
+              "timedOut": null,
+              "duration": 7675,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automationexercise.com/'); // open the page \ncy.get(allLocators.homePagesingup).click(); // select sign up tab \ncy.readFile('cypress/fixtures/signup_data.json').then(data => {\n  // pull out data\n  const name = data.name;\n  const email = data.email;\n  cy.get(allLocators.inputName).type(name);\n  cy.get(allLocators.inputEmail).type(email);\n});\ncy.get(allLocators.buttonform).click(); // send form\n//new form \ncy.get(allLocators.selectGender).click(); // select gender\ncy.readFile('cypress/fixtures/form_signup.json').then(data => {\n  // enter password\n  const password = data.password;\n  cy.get(allLocators.inputPassword).type(password);\n});\ncy.readFile('cypress/fixtures/form_signup.json').then(data => {\n  // select day\n  const day = data.day;\n  const month = data.month;\n  const year = data.year;\n  cy.get(allLocators.selectDay).select(day);\n  cy.get(allLocators.selectMonth).select(month);\n  cy.get(allLocators.selectYear).select(year);\n});\ncy.get(allLocators.newsletter).click(); // select newsletter\ncy.get(allLocators.option).click(); // select promotion\ncy.readFile('cypress/fixtures/form_signup.json').then(data => {\n  const first_name = data.first_name;\n  const last_name = data.last_name;\n  const company = data.company;\n  const addressone = data.address.addressone;\n  const addresstwo = data.address.addressone;\n  const country = data.address.country;\n  const state = data.address.state;\n  const city = data.address.city;\n  const zipcode = data.address.zipcode;\n  const celphone = data.company;\n  cy.get(allLocators.inputNameForm).type(first_name);\n  cy.get(allLocators.inputLastName).type(last_name);\n  cy.get(allLocators.inputCompany).type(company);\n  cy.get(allLocators.inputAddress).type(addressone);\n  cy.get(allLocators.inputAddresstwo).type(addresstwo);\n  cy.get(allLocators.country).select(country);\n  cy.get(allLocators.state).type(state);\n  cy.get(allLocators.city).type(city);\n  cy.get(allLocators.zipCode).type(zipcode);\n  cy.get(allLocators.celphone).type(celphone);\n});\ncy.get(allLocators.btnCreateAccount).click();\ncy.get(allLocators.textCreated).contains(\"Account Created!\");\ncy.get(allLocators.btnContinue).click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (webpack://cypessautomation/./cypress/e2e/UI/ecommerce.cy.js:26:7)",
+                "diff": null
+              },
+              "uuid": "df36a21c-9ca2-4864-955f-cc16827e1864",
+              "parentUUID": "5e0cc5df-a139-4a95-8d38-707ca60a955c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0546a73d-7b4e-4bd2-9121-2eec658531a2"
+          ],
+          "failures": [
+            "df36a21c-9ca2-4864-955f-cc16827e1864"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10161,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
