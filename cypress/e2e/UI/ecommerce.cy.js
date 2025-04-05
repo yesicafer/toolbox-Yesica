@@ -1,16 +1,16 @@
-import { getAllLocators } from '../../support/locator_signup';
-
+import { getAllLocators } from '../../support/signup_locator';
+import { URL } from '../../support/login_constants';
  
 // get all location of sing up 
 const allLocators = getAllLocators();
 
 describe('Register a new user ', () => {
    it('open link', () => {
-    cy.visit('https://automationexercise.com/')
+    cy.visit(URL)   
   }) 
   
   it('Singup', () => { 
-    cy.visit('https://automationexercise.com/') // open the page 
+    cy.visit(URL) // open the page 
     cy.get(allLocators.homePagesingup).click(); // select sign up tab 
     cy.readFile('cypress/fixtures/signup_data.json').then(data => { 
        // pull out data

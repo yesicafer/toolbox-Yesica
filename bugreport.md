@@ -1,6 +1,5 @@
 ---
 name: "Yesica Guayabo"
-about: Create a report to help us improve
 ---
 
 ### Environment
@@ -8,11 +7,7 @@ URL: (https://echo-serv.tbxnet.com/v1/qa/test1)
 Stage: qa
 
 <link to screenshot or video>
-Case 1
-![alt text](image.png)
-
-Case 2
-![alt text](image-1.png)
+N/A
 
 ### Logs
 <paste console logs here>
@@ -29,7 +24,7 @@ Case 2
 
 Case1: Validar el link, sin impresion con formato estilistico --> Ok
 Respuesta: {"ok":true,"date":"2025-04-04T22:42:58.349Z"}
-Observaciones: La hora actual es 05:42 pero en la pagina esta mostrando 22:42, falta validar si es correcto como lo tienen configurado en el servidor o se deba cambiar
+Observaciones: **Ok**.La hora actual es 05:42 pero en la pagina esta mostrando 22:42, falta validar si es correcto como lo tienen configurado en el servidor o se deba cambiar
 
 Case1: Validar el link, con impresion con formato estilistico --> Ok
 Respuesta:{
@@ -46,7 +41,7 @@ URL: (https://echo-serv.tbxnet.com/v1/qa/test2)
 Stage: qa
 
 <link to screenshot or video>
- ![alt text](image-2.png)
+N/A
 
 
 ### Logs
@@ -64,7 +59,7 @@ Stage: qa
 
 Case2: Validar el link, sin impresion con formato estilistico --> Ok
 Respuesta: {"code":"SYS-ERR","message":"An Error","details":"An Error","status":500}
-Observaciones: failed
+Observaciones: **failed**
 
 Case2.2: Validar el link, con impresion con formato estilistico --> Ok
 Respuesta{
@@ -79,9 +74,10 @@ Observaciones: **failed**
 
 | Bug #      | Name                                  |Description    
 |------------|---------------                        |
-| 1          | Error 500 cuando se ingresa al link   |Al ingresar al link https://echo-serv.tbxnet.com/v1/qa/test2 genera error 500
-|            |                                       |
-| ...        | ...           |
+| 1          | Error 500 cuando se ingresa al link   |Al ingresar al link https://echo-serv.tbxnet.com/v1/qa/test2 
+|            |                                       |genera error 500
+
+        
 
 
 [Ref:](https://echo-serv.tbxnet.com/public/bugreport.md)

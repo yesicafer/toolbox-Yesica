@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "cypress": "^13.6.1",
+    "cypress-ajv-schema-validator": "^1.4.0",
     "cypress-mochawesome-reporter": "^3.8.2"
-    
   }
 }
