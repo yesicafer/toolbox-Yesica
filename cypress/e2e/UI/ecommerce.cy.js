@@ -11,7 +11,7 @@ describe('Register a new user ', () => {
   
   it('Singup', () => { 
     cy.visit(URL) // open the page 
-    cy.get(allLocators.homePagesingup).click(); // select sign up tab 
+    cy.get(allLocators.homePagesingup).click(); 
     cy.readFile('cypress/fixtures/signup_data.json').then(data => { 
        // pull out data
       const name = data.name;
@@ -19,17 +19,17 @@ describe('Register a new user ', () => {
       cy.get(allLocators.inputName).type(name);
       cy.get(allLocators.inputEmail).type(email);    
     }) 
-    cy.get(allLocators.buttonform).click(); // send form
+    cy.get(allLocators.buttonform).click(); 
 
     //new form 
 
-    cy.get(allLocators.selectGender).click(); // select gender
-    cy.readFile('cypress/fixtures/form_signup.json').then(data => { // enter password
+    cy.get(allLocators.selectGender).click(); 
+    cy.readFile('cypress/fixtures/form_signup.json').then(data => { 
       const password = data.password;     
       cy.get(allLocators.inputPassword).type(password);     
    }) 
 
-   cy.readFile('cypress/fixtures/form_signup.json').then(data => { // select day
+   cy.readFile('cypress/fixtures/form_signup.json').then(data => { 
     const day = data.day;  
     const month = data.month; 
     const year = data.year;    
@@ -37,8 +37,8 @@ describe('Register a new user ', () => {
     cy.get(allLocators.selectMonth).select(month);  
     cy.get(allLocators.selectYear).select(year);      
  })    
-    cy.get(allLocators.newsletter).click(); // select newsletter
-    cy.get(allLocators.option).click(); // select promotion
+    cy.get(allLocators.newsletter).click(); 
+    cy.get(allLocators.option).click(); 
    
     cy.readFile('cypress/fixtures/form_signup.json').then(data => { 
 
