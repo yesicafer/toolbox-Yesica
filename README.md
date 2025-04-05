@@ -57,7 +57,7 @@ En la carpeta e2e, se encuentran las subcarpetas **API** y **UI**, donde se impl
 **Api_post_echo.cy.js** Se automatizaron las siguientes validaciones para el servicio echo con metodo POST.
 
 - 1. Se valida el codigo 200 es enviado en el response correctamente 
-- 2. Se valida los response headers del swagger vr ejecutados en cypress
+- 2. Se implementa assersiones con el fin de validar la homogeniedad de los datos en los header response, haciendo la comparativa en entre la respuesta del servicio y lo especificado en la documentacion del swagger
 - 3. Se valida la duracion de la respuesta del servicio se menor a  3 segundos 
 
 **Nota**: El payload se encuentra en la siguiente ruta:
